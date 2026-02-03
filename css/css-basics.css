@@ -1,0 +1,91 @@
+/* Selector universal */
+* {
+  box-sizing: border-box;
+}
+
+/* Selector de elemento */
+body {
+  font-family: Arial, sans-serif;
+  background-color: red;
+  margin-left: 30px;
+}
+
+p {
+  color: black;
+  opacity: 0.5;
+}
+
+/* Selector múltiple */
+h1,
+h2 {
+  color: red;
+}
+
+/* Selector de ID */
+#header {
+  background-color: #2563eb;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Selector de clase */
+.card {
+  background-color: green;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 10px solid #2563eb;
+  padding: 20px 30px 10px 5px;
+  border-radius: 8px;
+}
+
+h2,
+p {
+  /* background-color: #15803d; */
+  margin: 0px;
+}
+
+a {
+  color: #fff;
+}
+
+.highlight {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+/* Pseudo-clase */
+.btn {
+  padding: 10px 14px;
+  border: none;
+  background-color: #16a34a;
+  color: white;
+  cursor: pointer;
+  width: 400px;
+}
+
+.btn:hover {
+  background-color: #15803d;
+}
+
+/* Pseudo-clase estructural */
+li:first-child {
+  font-weight: bold;
+}
+
+/* Pseudo-elemento */
+h2::after {
+  content: " ✔";
+  color: #16a34a;
+}
+
+/* Selector de elemento */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  background-image: url(../img/landscape.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
