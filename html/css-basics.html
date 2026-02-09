@@ -33,6 +33,42 @@
           <li>Tercer item</li>
         </ul>
       </section>
+
+      <section class="card">
+        <h2>Tipos de display</h2>
+        <p>
+          La propiedad <strong>display</strong> define cómo se comporta un
+          elemento dentro del flujo del documento.
+        </p>
+
+        <h3>display: block</h3>
+        <p>
+          Ocupa todo el ancho disponible y cada elemento comienza en una nueva
+          línea.
+        </p>
+        <div class="display-box display-block">Bloque 1</div>
+        <div class="display-box display-block">Bloque 2</div>
+
+        <h3>display: inline</h3>
+        <p>Se comporta como texto, no respeta ancho ni alto.</p>
+        <span class="display-box display-inline">Inline 1</span>
+        <span class="display-box display-inline">Inline 2</span>
+        <span class="display-box display-inline">Inline 3</span>
+
+        <h3>display: inline-block</h3>
+        <p>Se muestra en línea pero permite definir ancho y alto.</p>
+        <div class="display-box display-inline-block">A</div>
+        <div class="display-box display-inline-block">B</div>
+        <div class="display-box display-inline-block">C</div>
+
+        <h3>display: none</h3>
+        <p>El elemento no se renderiza ni ocupa espacio.</p>
+        <hr />
+        <div class="display-box display-none">No visible</div>
+        <hr />
+        <p class="opacity">Este texto no se muestra pero si ocupa espacio.</p>
+        <hr />
+      </section>
     </main>
 
     <footer id="piedepagina">

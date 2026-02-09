@@ -12,7 +12,6 @@ body {
 
 p {
   color: black;
-  opacity: 0.5;
 }
 
 /* Selector múltiple */
@@ -31,7 +30,7 @@ h2 {
 
 /* Selector de clase */
 .card {
-  background-color: green;
+  background-color: rgb(158, 240, 158);
   margin-top: 30px;
   margin-bottom: 20px;
   border: 10px solid #2563eb;
@@ -41,7 +40,6 @@ h2 {
 
 h2,
 p {
-  /* background-color: #15803d; */
   margin: 0px;
 }
 
@@ -83,9 +81,47 @@ h2::after {
 footer {
   text-align: center;
   margin-top: 40px;
-  color: #666;
   background-image: url(../img/landscape.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
+}
+
+/* =========================
+   DISPLAY BÁSICO
+========================= */
+
+.display-box {
+  background-color: #0ea5e9;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* block */
+.display-block {
+  display: block;
+}
+
+/* inline */
+.display-inline {
+  display: inline;
+}
+
+/* inline-block */
+.display-inline-block {
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* none */
+.display-none {
+  display: none;
+}
+
+.opacity {
+  opacity: 1;
 }
