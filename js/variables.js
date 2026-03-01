@@ -90,21 +90,3 @@ camaleon = function () {
   return "Soy función";
 };
 console.log("Valor:", camaleon, "| Tipo:", typeof camaleon);
-
-/* Operaciones con números y strings */
-const num1 = 10;
-const num2 = 20;
-const resultado = num1 + num2;
-console.log("Resultado suma:", resultado);
-
-const nombre = "Juan";
-const saludo = "Hola, " + num2 + "!";
-console.log("Resultado concatenación:", saludo);
-
-console.log("Curiosidad: concatenación, no suma", num1 + "2");
-console.log("Curiosidad: resta, no concatenación", num1 - "2");
-
-const numero = 50;
-const texto = "100";
-console.log("Número " + numero + " convertido a string:", String(numero));
-console.log("Texto " + texto + " convertido a número:", Number(texto));
