@@ -15,7 +15,7 @@ console.log("=== OPERADORES ARITMÉTICOS ===");
 console.log("Suma:", a + b); // 15
 
 // Resta
-console.log("Resta:", a - b); // 5
+console.log("Resta:", b - a); // -5
 
 // Multiplicación
 console.log("Multiplicación:", a * b); // 50
@@ -30,11 +30,11 @@ console.log("Módulo:", a % b); // 0
 console.log("Potencia:", a ** b); // 10^5 = 100000
 
 // Incremento
-a++;
+a++; // a = a + 1
 console.log("Incremento:", a); // 11
 
 // Decremento
-b--;
+b--; // b = b - 1
 console.log("Decremento:", b); // 4
 
 /* Operaciones con números y strings */
