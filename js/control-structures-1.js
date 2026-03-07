@@ -6,10 +6,9 @@
 // 1️⃣ IF
 // ==========================================
 // Se usa para ejecutar código solo si una condición es verdadera
+console.log("=== IF ===");
 
 let edad = 20;
-
-console.log("=== IF ===");
 
 if (edad >= 18) {
   console.log("Eres mayor de edad");
@@ -20,10 +19,9 @@ if (edad >= 18) {
 // ==========================================
 // Permite ejecutar un bloque si la condición es verdadera
 // y otro bloque si es falsa
+console.log("\n=== IF - ELSE ===");
 
 let numero = 7;
-
-console.log("\n=== IF - ELSE ===");
 
 if (numero % 2 === 0) {
   console.log("El número es par");
@@ -32,17 +30,31 @@ if (numero % 2 === 0) {
 }
 
 // ==========================================
+// 2️⃣ VALORES FALSOS EN JS
+// ==========================================
+console.log("\n=== FALSE VALUE IN JS ===");
+
+let valor = 0; // Puedes cambiar este valor a: null, undefined, 0, "", false para probar diferentes casos
+
+if (valor) {
+  console.log("El valor es verdadero");
+} else {
+  console.log("El valor es falso");
+}
+
+// ==========================================
 // 3️⃣ IF - ELSE IF - ELSE
 // ==========================================
 // Permite evaluar múltiples condiciones
-
-let nota = 85;
-
 console.log("\n=== IF - ELSE IF - ELSE ===");
 
-if (nota >= 90) {
+let nota = 70;
+
+if (nota >= 90 && nota <= 100) {
   console.log("Excelente");
-} else if (nota >= 70) {
+} else if (nota >= 80 && nota < 90) {
+  console.log("Bien");
+} else if (nota >= 60 && nota < 80) {
   console.log("Aprobado");
 } else {
   console.log("Reprobado");
@@ -53,10 +65,10 @@ if (nota >= 90) {
 // ==========================================
 // Es una forma corta de escribir un if-else
 // Sintaxis: condición ? valorSiTrue : valorSiFalse
+console.log("\n=== OPERADOR TERNARIO ===");
 
 let esMayor = edad >= 18 ? "Sí es mayor" : "No es mayor";
 
-console.log("\n=== OPERADOR TERNARIO ===");
 console.log(esMayor);
 
 // ==========================================

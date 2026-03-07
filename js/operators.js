@@ -59,9 +59,10 @@ console.log("Texto " + texto + " convertido a número:", Number(texto));
 // 2️⃣ OPERADORES DE ASIGNACIÓN COMPUESTOS
 // ==========================================
 
+console.log("\n=== OPERADORES DE ASIGNACIÓN COMPUESTOS ===");
 let x = 20;
 
-console.log("\n=== OPERADORES DE ASIGNACIÓN COMPUESTOS ===");
+console.log("Valor inicial de x:", x);
 
 // Suma y asigna
 x += 5; // x = x + 5
@@ -95,6 +96,8 @@ let num1 = 10;
 let num2 = "10";
 
 console.log("\n=== OPERADORES DE COMPARACIÓN ===");
+console.log("num1:", num1, "| Tipo:", typeof num1);
+console.log("num2:", num2, "| Tipo:", typeof num2);
 
 // Igualdad (compara solo valor)
 console.log("num1 == num2:", num1 == num2); // true
@@ -129,17 +132,31 @@ let tieneLicencia = true;
 
 console.log("\n=== OPERADORES LÓGICOS ===");
 
+console.log("Edad:", edad);
+console.log("Tiene licencia:", tieneLicencia);
 // AND (&&)
 // Devuelve true si ambas condiciones son verdaderas
-console.log("Puede conducir:", edad >= 18 && tieneLicencia);
+console.log(
+  "Puede conducir edad >= 18 y tiene licencia:",
+  edad >= 18 && tieneLicencia,
+);
 
 // OR (||)
 // Devuelve true si al menos una condición es verdadera
-console.log("Tiene beneficio:", edad < 18 || tieneLicencia);
+console.log(
+  "Tiene beneficio edad < 18 o tiene licencia:",
+  edad < 18 || tieneLicencia,
+);
 
 // NOT (!)
 // Invierte el valor booleano
 console.log("No tiene licencia:", !tieneLicencia);
+
+// ==========================================
+// Operadores aritméticos y de comparación
+console.log("\n=== OPERADORES ARITMÉTICOS Y DE COMPARACIÓN ===");
+console.log("Suma y comparación (7 + 3 == 10):", 7 + 3 == 10); // true
+console.log("Suma y comparación (7 < 5 + 3):", 7 < 5 + 3); // true
 
 // ==========================================
 // FIN DEL ARCHIVO
