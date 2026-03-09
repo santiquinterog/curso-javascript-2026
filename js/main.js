@@ -1,4 +1,7 @@
 /* import "./variables.js"; */
 /* import "./strings.js"; */
 /* import "./operators.js"; */
-import "./control-structures-1.js";
+import "./conditionals.js";
+/* import "./arrays-and-loops.js"; */
+/* import "./functions.js"; */
+/* import "./objects.js"; */
