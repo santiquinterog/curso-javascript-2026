@@ -1,6 +1,5 @@
 /* ======================================================
-   EJEMPLOS DE JAVASCRIPT
-   Arreglos y Bucles
+   EJEMPLOS DE ESTRUCTURAS DE CONTROL CICLOS EN JS
    ====================================================== */
 
 /* ======================================================
@@ -13,6 +12,8 @@
 let frutas = ["manzana", "banana", "naranja"];
 
 console.log("Arreglo inicial:", frutas);
+console.log("frutas[1]:", frutas[1]); // Acceder al segundo elemento (banana)
+console.log("Longitud del arreglo:", frutas.length); // Longitud del arreglo (3)
 
 /* ======================================================
    MÉTODOS FUNDAMENTALES DE ARREGLOS
@@ -27,6 +28,7 @@ console.log("Arreglo inicial:", frutas);
 frutas.push("mango");
 
 console.log("Después de push:", frutas);
+console.log("Longitud después de push:", frutas.length);
 
 /* -----------------------------
    unshift()
@@ -165,7 +167,7 @@ frutas.forEach(function (fruta) {
    Crea un NUEVO arreglo transformando los elementos
 */
 
-let numerosOriginales = [1, 2, 3, 4];
+let numerosOriginales = [0, 1, 2, 3, 4];
 
 let numerosDoble = numerosOriginales.map(function (num) {
   return num * 2;
@@ -181,7 +183,61 @@ console.log("map resultado:", numerosDoble);
 */
 
 let numerosFiltrados = numerosOriginales.filter(function (num) {
-  return num > 2;
+  return num % 2 === 0; // Devuelve solo los números pares
 });
 
 console.log("filter resultado:", numerosFiltrados);
+
+// Ejercicio:
+let frutasEjercicio = [
+  "manzana",
+  "coco",
+  "naranja",
+  "tomate",
+  "mango",
+  "uva",
+  "kiwi",
+];
+console.log("Arreglo frutasEjercicio:", frutasEjercicio);
+let frutasEjercicioResuelto = frutasEjercicio.filter(function (fruta) {
+  return fruta.includes("o"); // Devuelve solo las frutas que contienen una letra
+});
+
+console.log("filter resultado:", frutasEjercicioResuelto);
+
+/* ======================================================
+   EJERCICIOS (ARRAYS)
+   ====================================================== */
+
+// Ejercicio 1:
+// Dado el arreglo "edades", crea un nuevo arreglo con solo las edades
+// mayores o iguales a 18 y muéstralo en consola.
+let edades = [12, 18, 25, 9, 30, 16, 22];
+
+let mayoresEdad = edades.filter(function (edad) {
+  return edad >= 18;
+});
+
+console.log(mayoresEdad);
+
+// Ejercicio 2:
+// Dado el arreglo "precios", crea un nuevo arreglo con el 10% de descuento
+// aplicado a cada precio y muéstralo en consola.
+let precios = [100, 250, 80, 60, 400];
+
+let descuentos = precios.map(function (precio) {
+  return precio * 0.9;
+});
+
+console.log(descuentos);
+
+// Ejercicio 3:
+// Dado el arreglo "palabras", crea un nuevo arreglo con las palabras en
+// mayusculas y luego muestra la longitud de ese nuevo arreglo.
+let palabras = ["sol", "luna", "cielo", "mar"];
+
+let mayusculas = palabras.map(function (palabra) {
+  return palabra.toUpperCase();
+});
+
+console.log(mayusculas, mayusculas.length);

@@ -1,5 +1,5 @@
 // ==========================================
-// EJEMPLOS DE ESTRUCTURAS DE CONTROL EN JS
+// EJEMPLOS DE ESTRUCTURAS DE CONTROL CONDICIONALES EN JS
 // ==========================================
 
 // ==========================================
