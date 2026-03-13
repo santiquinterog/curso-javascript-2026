@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.contenedor {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.caja {
+  padding: 10px;
+  background: #eee;
+  margin-bottom: 10px;
+}
+
+.destacada {
+  background: yellow;
+}
+
+.btn {
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+ul {
+  margin-top: 10px;
+}
