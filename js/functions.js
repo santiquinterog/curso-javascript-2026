@@ -31,7 +31,7 @@ saludar();
 // Los parámetros son valores que recibe la función
 
 function saludarPersona(nombre) {
-  console.log("Hola " + nombre);
+  console.log("Hola, " + nombre);
 }
 
 saludarPersona("Santiago");
@@ -87,7 +87,7 @@ console.log("Suma guardada:", suma);
 // Permiten definir valores si no se envían argumentos
 
 function saludarUsuario(nombre = "Invitado") {
-  console.log("Hola " + nombre);
+  console.log("Hola, " + nombre);
 }
 
 saludarUsuario("Carlos");

@@ -138,3 +138,68 @@ let nombres = usuarios.map(function (usuario) {
 });
 
 console.log(nombres);
+
+/* ======================================================
+   13. ACCEDER A VALORES DE ARREGLOS Y OBJETOS ANIDADOS
+   ====================================================== */
+console.log("--------------------------------------------------");
+
+// 1. Dificultad baja
+const usuarioEjericio = {
+  nombre: "Laura",
+  edad: 28,
+  direccion: {
+    ciudad: "Medellín",
+    pais: "Colombia",
+  },
+};
+/*Accede al valor de nombre. Accede al valor de ciudad. Accede al valor de pais. */
+console.log(
+  "Ejercicio 1: ",
+  usuarioEjericio.nombre,
+  usuarioEjericio.direccion.ciudad,
+  usuarioEjericio.direccion.pais,
+);
+
+// 2. Dificultad media
+
+const tienda = {
+  nombre: "TechStore",
+  productos: [
+    { nombre: "Laptop", precio: 1200 },
+    { nombre: "Mouse", precio: 25 },
+    { nombre: "Teclado", precio: 75 },
+  ],
+};
+
+/* Accede al nombre del segundo producto. Accede al precio del tercer producto. Accede al precio del primer producto. */
+console.log(
+  "Ejercicio 2: ",
+  tienda.productos[1].nombre,
+  tienda.productos[2].precio,
+  tienda.productos[0].precio,
+);
+
+// 3. Dificultad alta
+const empresa = {
+  nombre: "DevSolutions",
+  departamentos: [
+    {
+      nombre: "Frontend",
+      empleados: [
+        { nombre: "Ana", habilidades: ["HTML", "CSS", "React"] },
+        { nombre: "Luis", habilidades: ["Vue", "JavaScript"] },
+      ],
+    },
+    {
+      nombre: "Backend",
+      empleados: [
+        { nombre: "Carlos", habilidades: ["Node", "MongoDB"] },
+        { nombre: "Sofia", habilidades: ["Python", "Django", "PostgreSQL"] },
+      ],
+    },
+  ],
+};
+
+/* Accede al nombre del primer empleado del departamento Frontend. Accede a la segunda habilidad de Luis. Accede a la tercera habilidad de Sofia. Accede al nombre del segundo departamento. */
+console.log("Ejercicio 3: ");
