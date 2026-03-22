@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  margin-top: 5px;
+  padding: 8px;
+}
+
+button {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#resultado {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}

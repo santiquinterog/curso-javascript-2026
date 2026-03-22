@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario DOM</title>
+    <link rel="stylesheet" href="/css/form-logic-example.css">
+</head>
+
+<body>
+
+    <h1>Registro de Usuario</h1>
+
+    <form id="formulario">
+
+        <!-- TEXT -->
+        <label>Nombre:</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" />
+
+        <!-- RADIO -->
+        <label>Género:</label>
+        <div>
+            <input type="radio" name="genero" value="Masculino"> Masculino
+            <input type="radio" name="genero" value="Femenino"> Femenino
+        </div>
+
+        <!-- CHECKBOX -->
+        <label>Intereses:</label>
+        <div>
+            <input type="checkbox" name="intereses" value="JS"> JavaScript
+            <input type="checkbox" name="intereses" value="CSS"> CSS
+            <input type="checkbox" name="intereses" value="HTML"> HTML
+        </div>
+
+        <!-- SELECT -->
+        <label>País:</label>
+        <select id="pais">
+            <option value="">Seleccione</option>
+            <option value="Colombia">Colombia</option>
+            <option value="México">México</option>
+            <option value="España">España</option>
+        </select>
+
+        <!-- SUBMIT -->
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Resultado:</h2>
+    <div id="resultado"></div>
+
+    <script src="/js/form-logic-example.js"></script>
+</body>
+
+</html>
