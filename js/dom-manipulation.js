@@ -143,8 +143,42 @@ const hijo = document.querySelector("#lista li");
 padre.removeChild(hijo);
 
 /* ======================================================
-   8. EJEMPLO COMPLETO
+   8. EVENTOS
    ====================================================== */
+
+/* -----------------------------
+   EVENTO INPUT
+   -----------------------------
+   Muestra en tiempo real lo que el usuario escribe
+*/
+
+const inputNombre = document.getElementById("inputNombre");
+const textoNombre = document.getElementById("textoNombre");
+
+inputNombre.addEventListener("input", function () {
+  textoNombre.innerText = "Hola " + inputNombre.value;
+});
+
+/* -----------------------------
+   EVENTO MOUSEOVER
+   -----------------------------
+   Cambia el estilo al pasar el mouse
+*/
+
+const boxHover = document.getElementById("boxHover");
+
+boxHover.addEventListener("mouseover", function () {
+  boxHover.style.backgroundColor = "lightblue";
+});
+
+boxHover.addEventListener("mouseout", function () {
+  boxHover.style.backgroundColor = "#ccc";
+});
+
+/* -----------------------------
+   EVENTO CLICK
+   -----------------------------
+*/
 
 // Crear un botón dinámicamente
 
