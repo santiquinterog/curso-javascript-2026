@@ -201,5 +201,12 @@ const empresa = {
   ],
 };
 
-/* Accede al nombre del primer empleado del departamento Frontend. Accede a la segunda habilidad de Luis. Accede a la tercera habilidad de Sofia. Accede al nombre del segundo departamento. */
-console.log("Ejercicio 3: ");
+/* Accede al nombre del primer empleado del departamento Frontend. Accede a la segunda habilidad de Luis. 
+Accede a la tercera habilidad de Sofia. Accede al nombre del segundo departamento. */
+console.log(
+  "Ejercicio 3: ",
+  empresa.departamentos[0].empleados[0].nombre,
+  empresa.departamentos[0].empleados[1].habilidades[1],
+  empresa.departamentos[1].empleados[1].habilidades[2],
+  empresa.departamentos[1].nombre,
+);
