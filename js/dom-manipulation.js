@@ -155,12 +155,12 @@ padre.removeChild(hijo);
 const inputNombre = document.getElementById("inputNombre");
 const textoNombre = document.getElementById("textoNombre");
 
-inputNombre.addEventListener("input", function () {
-  textoNombre.innerText = "Hola " + inputNombre.value;
+inputNombre.addEventListener("input", () => {
+  textoNombre.innerText = "Hola, " + inputNombre.value;
 });
 
 /* -----------------------------
-   EVENTO MOUSEOVER
+   EVENTO MOUSEOVER - MOUSEOUT
    -----------------------------
    Cambia el estilo al pasar el mouse
 */
@@ -171,7 +171,7 @@ boxHover.addEventListener("mouseover", function () {
   boxHover.style.backgroundColor = "lightblue";
 });
 
-boxHover.addEventListener("mouseout", function () {
+boxHover.addEventListener("mouseout", () => {
   boxHover.style.backgroundColor = "#ccc";
 });
 
@@ -184,13 +184,21 @@ boxHover.addEventListener("mouseout", function () {
 
 const boton = document.createElement("button");
 
-boton.innerText = "Haz clic";
+boton.innerText = "Haz clic 2";
 boton.classList.add("btn");
 
 document.body.appendChild(boton);
 
 // Cambiar texto al hacer clic
 
+// Forma 1: desde JavaScript
 boton.addEventListener("click", function () {
   boton.innerText = "¡Clic detectado!";
 });
+
+// Forma 2: desde HTML (onclick)
+function cambiarTexto(event) {
+  console.log(event); // muestra el evento completo
+
+  event.target.innerText = "¡Clic detectado desde HTML!";
+}

@@ -23,8 +23,16 @@ body {
   padding: 10px;
   cursor: pointer;
   margin-top: 10px;
+  background-color: aqua;
 }
 
 ul {
+  margin-top: 10px;
+}
+
+.boxHover {
+  width: 200px;
+  height: 100px;
+  background-color: #ccc;
   margin-top: 10px;
 }
