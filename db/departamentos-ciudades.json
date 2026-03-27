@@ -1,0 +1,53 @@
+{
+  "departamentos": [
+    { "id": 1, "nombre": "Antioquia" },
+    { "id": 2, "nombre": "Cundinamarca" },
+    { "id": 3, "nombre": "Valle del Cauca" },
+    { "id": 4, "nombre": "Atlántico" },
+    { "id": 5, "nombre": "Santander" },
+    { "id": 6, "nombre": "Bolívar" },
+    { "id": 7, "nombre": "Nariño" },
+    { "id": 8, "nombre": "Córdoba" }
+  ],
+  "ciudades": [
+    { "id": 1,  "nombre": "Medellín",       "departamento_id": 1 },
+    { "id": 2,  "nombre": "Bello",           "departamento_id": 1 },
+    { "id": 3,  "nombre": "Envigado",        "departamento_id": 1 },
+    { "id": 4,  "nombre": "Itagüí",          "departamento_id": 1 },
+    { "id": 5,  "nombre": "Rionegro",        "departamento_id": 1 },
+
+    { "id": 6,  "nombre": "Bogotá",          "departamento_id": 2 },
+    { "id": 7,  "nombre": "Soacha",          "departamento_id": 2 },
+    { "id": 8,  "nombre": "Chía",            "departamento_id": 2 },
+    { "id": 9,  "nombre": "Zipaquirá",       "departamento_id": 2 },
+    { "id": 10, "nombre": "Fusagasugá",      "departamento_id": 2 },
+
+    { "id": 11, "nombre": "Cali",            "departamento_id": 3 },
+    { "id": 12, "nombre": "Buenaventura",    "departamento_id": 3 },
+    { "id": 13, "nombre": "Palmira",         "departamento_id": 3 },
+    { "id": 14, "nombre": "Tulúa",           "departamento_id": 3 },
+    { "id": 15, "nombre": "Buga",            "departamento_id": 3 },
+
+    { "id": 16, "nombre": "Barranquilla",    "departamento_id": 4 },
+    { "id": 17, "nombre": "Soledad",         "departamento_id": 4 },
+    { "id": 18, "nombre": "Malambo",         "departamento_id": 4 },
+    { "id": 19, "nombre": "Sabanalarga",     "departamento_id": 4 },
+
+    { "id": 20, "nombre": "Bucaramanga",     "departamento_id": 5 },
+    { "id": 21, "nombre": "Floridablanca",   "departamento_id": 5 },
+    { "id": 22, "nombre": "Girón",           "departamento_id": 5 },
+    { "id": 23, "nombre": "Piedecuesta",     "departamento_id": 5 },
+
+    { "id": 24, "nombre": "Cartagena",       "departamento_id": 6 },
+    { "id": 25, "nombre": "Magangué",        "departamento_id": 6 },
+    { "id": 26, "nombre": "Turbaco",         "departamento_id": 6 },
+
+    { "id": 27, "nombre": "Pasto",           "departamento_id": 7 },
+    { "id": 28, "nombre": "Ipiales",         "departamento_id": 7 },
+    { "id": 29, "nombre": "Tumaco",          "departamento_id": 7 },
+
+    { "id": 30, "nombre": "Montería",        "departamento_id": 8 },
+    { "id": 31, "nombre": "Lorica",          "departamento_id": 8 },
+    { "id": 32, "nombre": "Sahagún",         "departamento_id": 8 }
+  ]
+}
