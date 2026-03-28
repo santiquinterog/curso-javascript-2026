@@ -99,6 +99,11 @@ function eliminarUsuario(index) {
   renderUsuarios();
 }
 
+function eliminarTodo() {
+  localStorage.removeItem("usuarios");
+  renderUsuarios();
+}
+
 /* ============================
    6. INICIALIZAR
    ============================ */
