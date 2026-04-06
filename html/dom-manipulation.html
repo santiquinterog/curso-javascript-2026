@@ -2,70 +2,70 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Ejemplos DOM</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/dom-manipulation.css">
+  <meta charset="UTF-8">
+  <title>Ejemplos DOM</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/dom-manipulation.css">
 </head>
 
 <body>
 
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a class="nav-brand" href="index.html">⚡ Curso JS 2026</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="css-basics.html" class="nav-link">CSS Básico</a></li>
-                <li><a href="flexbox.html" class="nav-link">Flexbox</a></li>
-                <li><a href="forms-basics.html" class="nav-link">Formularios</a></li>
-                <li><a href="form-logic-example.html" class="nav-link">Form + Lógica</a></li>
-                <li><a href="dom-manipulation.html" class="nav-link active">DOM</a></li>
-                <li><a href="javascript-basics.html" class="nav-link">JS Básico</a></li>
-                <li><a href="asincronismo.html" class="nav-link">Asincronismo</a></li>
-                <li><a href="local-storage.html" class="nav-link">LocalStorage</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <h1 id="titulo">Título original</h1>
-
-    <div class="contenedor">
-        <p>Este es un párrafo dentro del contenedor.</p>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a class="nav-brand" href="index.html">⚡ Curso JS 2026</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="forms-basics.html" class="nav-link">Formularios</a></li>
+        <li><a href="css-basics.html" class="nav-link">CSS Básico</a></li>
+        <li><a href="flexbox.html" class="nav-link">Flexbox</a></li>
+        <li><a href="javascript-basics.html" class="nav-link">JS Básico</a></li>
+        <li><a href="dom-manipulation.html" class="nav-link active">DOM</a></li>
+        <li><a href="form-logic-example.html" class="nav-link">Form + Lógica</a></li>
+        <li><a href="local-storage.html" class="nav-link">LocalStorage</a></li>
+        <li><a href="asincronismo.html" class="nav-link">Asincronismo</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="caja">
-        Caja para probar manipulación de clases
-    </div>
+  <h1 id="titulo">Título original</h1>
 
-    <p class="item">Elemento con clase item 1</p>
-    <p class="item">Elemento con clase item 2</p>
+  <div class="contenedor">
+    <p>Este es un párrafo dentro del contenedor.</p>
+  </div>
 
-    <a href="https://google.com.co">Ir a un enlace</a>
+  <div class="caja">
+    Caja para probar manipulación de clases
+  </div>
 
-    <h2>Lista de elementos</h2>
+  <p class="item">Elemento con clase item 1</p>
+  <p class="item">Elemento con clase item 2</p>
 
-    <ul id="lista">
-        <li>Elemento 1</li>
-        <li class="eliminar">Elemento 2 (se puede eliminar)</li>
-        <li>Elemento 3</li>
-    </ul>
+  <a href="https://google.com.co">Ir a un enlace</a>
 
-    <h2>Eventos</h2>
+  <h2>Lista de elementos</h2>
 
-    <!-- Evento input -->
-    <input type="text" id="inputNombre" placeholder="Escribe tu nombre" />
+  <ul id="lista">
+    <li>Elemento 1</li>
+    <li class="eliminar">Elemento 2 (se puede eliminar)</li>
+    <li>Elemento 3</li>
+  </ul>
 
-    <p id="textoNombre"></p>
+  <h2>Eventos</h2>
 
-    <!-- Evento mouseover -->
-    <div id="boxHover" class="boxHover">
-        Pasa el mouse aquí
-    </div>
+  <!-- Evento input -->
+  <input type="text" id="inputNombre" placeholder="Escribe tu nombre" />
 
-    <button class="btn" onclick="cambiarTexto(event)">Haz clic 1</button>
+  <p id="textoNombre"></p>
 
-    <!-- Archivo JS -->
-    <script src="../js/dom-manipulation.js"></script>
+  <!-- Evento mouseover -->
+  <div id="boxHover" class="boxHover">
+    Pasa el mouse aquí
+  </div>
+
+  <button class="btn" onclick="cambiarTexto(event)">Haz clic 1</button>
+
+  <!-- Archivo JS -->
+  <script src="../js/dom-manipulation.js"></script>
 
 </body>
 

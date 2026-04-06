@@ -2,77 +2,77 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Formulario DOM</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/form-logic-example.css">
+  <meta charset="UTF-8">
+  <title>Formulario DOM</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/form-logic-example.css">
 </head>
 
 <body>
 
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a class="nav-brand" href="index.html">⚡ Curso JS 2026</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="css-basics.html" class="nav-link">CSS Básico</a></li>
-                <li><a href="flexbox.html" class="nav-link">Flexbox</a></li>
-                <li><a href="forms-basics.html" class="nav-link">Formularios</a></li>
-                <li><a href="form-logic-example.html" class="nav-link active">Form + Lógica</a></li>
-                <li><a href="dom-manipulation.html" class="nav-link">DOM</a></li>
-                <li><a href="javascript-basics.html" class="nav-link">JS Básico</a></li>
-                <li><a href="asincronismo.html" class="nav-link">Asincronismo</a></li>
-                <li><a href="local-storage.html" class="nav-link">LocalStorage</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a class="nav-brand" href="index.html">⚡ Curso JS 2026</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="forms-basics.html" class="nav-link">Formularios</a></li>
+        <li><a href="css-basics.html" class="nav-link">CSS Básico</a></li>
+        <li><a href="flexbox.html" class="nav-link">Flexbox</a></li>
+        <li><a href="javascript-basics.html" class="nav-link">JS Básico</a></li>
+        <li><a href="dom-manipulation.html" class="nav-link">DOM</a></li>
+        <li><a href="form-logic-example.html" class="nav-link active">Form + Lógica</a></li>
+        <li><a href="local-storage.html" class="nav-link">LocalStorage</a></li>
+        <li><a href="asincronismo.html" class="nav-link">Asincronismo</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <h1>Registro de Usuario</h1>
+  <h1>Registro de Usuario</h1>
 
-    <form id="formulario">
+  <form id="formulario">
 
-        <!-- TEXT -->
-        <label>Nombre:</label>
-        <input type="text" id="nombre" placeholder="Tu nombre" />
+    <!-- TEXT -->
+    <label>Nombre:</label>
+    <input type="text" id="nombre" placeholder="Tu nombre" />
 
-        <!-- RADIO -->
-        <label>Género:</label>
-        <div>
-            <input type="radio" name="genero" value="Masculino"> Masculino
-            <input type="radio" name="genero" value="Femenino"> Femenino
-        </div>
+    <!-- RADIO -->
+    <label>Género:</label>
+    <div>
+      <input type="radio" name="genero" value="Masculino"> Masculino
+      <input type="radio" name="genero" value="Femenino"> Femenino
+    </div>
 
-        <!-- CHECKBOX -->
-        <label>Intereses:</label>
-        <div>
-            <input type="checkbox" name="intereses" value="JS"> JavaScript
-            <input type="checkbox" name="intereses" value="CSS"> CSS
-            <input type="checkbox" name="intereses" value="HTML"> HTML
-        </div>
+    <!-- CHECKBOX -->
+    <label>Intereses:</label>
+    <div>
+      <input type="checkbox" name="intereses" value="JS"> JavaScript
+      <input type="checkbox" name="intereses" value="CSS"> CSS
+      <input type="checkbox" name="intereses" value="HTML"> HTML
+    </div>
 
-        <!-- SELECT DEPARTAMENTO -->
-        <label>Departamento:</label>
-        <select id="departamento">
-            <option value="">Seleccione</option>
-        </select>
+    <!-- SELECT DEPARTAMENTO -->
+    <label>Departamento:</label>
+    <select id="departamento">
+      <option value="">Seleccione</option>
+    </select>
 
-        <!-- SELECT CIUDAD -->
-        <label>Ciudad:</label>
-        <select id="ciudad">
-            <option value="">Seleccione</option>
-        </select>
+    <!-- SELECT CIUDAD -->
+    <label>Ciudad:</label>
+    <select id="ciudad">
+      <option value="">Seleccione</option>
+    </select>
 
-        <!-- SUBMIT -->
-        <button type="submit">Enviar</button>
+    <!-- SUBMIT -->
+    <button type="submit">Enviar</button>
 
-    </form>
+  </form>
 
-    <hr>
+  <hr>
 
-    <h2>Resultado:</h2>
-    <div id="resultado"></div>
+  <h2>Resultado:</h2>
+  <div id="resultado"></div>
 
-    <script src="../js/form-logic-example.js"></script>
+  <script src="../js/form-logic-example.js"></script>
 </body>
 
 </html>
