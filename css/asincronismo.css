@@ -10,6 +10,22 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* ======================================================
+   SECCIONES
+====================================================== */
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #a0a0cc;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #3a3a58;
+  padding-bottom: 8px;
+}
+
 .container {
   margin-bottom: 20px;
 }
@@ -28,11 +44,92 @@ button:hover {
   background: #45a049;
 }
 
-#output {
+#fetch-output {
   margin-top: 20px;
   padding: 20px;
   background: #2a2a40;
   border-radius: 8px;
-  min-height: 120px;
+  min-height: 60px;
   text-align: left;
+}
+
+/* ======================================================
+   CARDS — Rick & Morty
+====================================================== */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.card {
+  background: #2a2a40;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.card-body h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.card-body p {
+  margin: 4px 0;
+  font-size: 0.82rem;
+  color: #a0a0cc;
+}
+
+/* Estado del personaje */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.status.alive .status-dot {
+  background: #4caf50;
+}
+.status.alive {
+  color: #4caf50;
+}
+
+.status.dead .status-dot {
+  background: #f44336;
+}
+.status.dead {
+  color: #f44336;
+}
+
+.status.unknown .status-dot {
+  background: #9e9e9e;
+}
+.status.unknown {
+  color: #9e9e9e;
 }

@@ -1,187 +1,119 @@
 // ======================================================
-// UTILIDAD PARA MOSTRAR MENSAJES EN PANTALLA
+// FETCH CON PROMESAS — Rick & Morty API
 // ======================================================
-const output = document.getElementById("output");
 
-function log(message) {
+const fetchOutput = document.getElementById("fetch-output");
+
+function logFetch(message) {
   const p = document.createElement("p");
   p.textContent = message;
-  output.appendChild(p);
+  fetchOutput.appendChild(p);
 }
 
-function clearOutput() {
-  output.innerHTML = "";
+function clearFetchOutput() {
+  fetchOutput.innerHTML = "";
+  document.getElementById("cards-container").innerHTML = "";
 }
 
-// ======================================================
-// 1. CALLBACKS
-// ======================================================
+function renderCards(characters) {
+  const container = document.getElementById("cards-container");
 
-function obtenerDatosCallback(callback) {
-  // (2) Se agenda una tarea asincrónica en el navegador (Web APIs)
-  setTimeout(() => {
-    // (5) Este bloque entra al CALL STACK cuando termina el tiempo
+  characters.forEach((character) => {
+    const card = document.createElement("div");
+    card.className = "card";
 
-    const exito = true;
+    const statusClass = character.status.toLowerCase().replace(" ", "-");
 
-    if (exito) {
-      callback(null, "Datos obtenidos (callback)");
-    } else {
-      callback("Error al obtener datos", null);
-    }
-  }, 2000);
-}
+    const img = document.createElement("img");
+    img.src = character.image;
+    img.alt = character.name;
 
-function ejecutarCallbacks() {
-  clearOutput();
+    const body = document.createElement("div");
+    body.className = "card-body";
 
-  // (1) Se ejecuta inmediatamente
-  log("Paso A");
+    const name = document.createElement("h3");
+    name.textContent = character.name;
 
-  // (2) Se llama la función asincrónica
-  obtenerDatosCallback((error, data) => {
-    // (6) Este callback entra al call stack cuando setTimeout termina
+    const status = document.createElement("p");
+    status.className = `status ${statusClass}`;
+    const dot = document.createElement("span");
+    dot.className = "status-dot";
+    status.appendChild(dot);
+    status.append(` ${character.status} — ${character.species}`);
 
-    if (error) {
-      log("Error: " + error);
-      return;
-    }
+    const gender = document.createElement("p");
+    gender.textContent = `Género: ${character.gender}`;
 
-    // (7) Se ejecuta después de TODO lo síncrono
-    log(data);
-    log("Paso C");
+    const origin = document.createElement("p");
+    origin.textContent = `Origen: ${character.origin.name}`;
+
+    body.appendChild(name);
+    body.appendChild(status);
+    body.appendChild(gender);
+    body.appendChild(origin);
+
+    card.appendChild(img);
+    card.appendChild(body);
+    container.appendChild(card);
   });
-
-  // (3) Sigue ejecutando sin esperar
-  log("Paso B (no espera)");
-
-  // (4) El call stack queda libre → luego el event loop ejecuta lo pendiente
 }
 
-/*
-FLUJO REAL:
-1 → Paso A
-2 → setTimeout se agenda
-3 → Paso B
-4 → termina código síncrono
-5 → setTimeout termina (cola de tareas)
-6 → callback entra al stack
-7 → Paso C
-*/
+// --- Método 1: Promesas (.then / .catch / .finally) ---
 
-// ======================================================
-// 2. PROMESAS (then / catch / finally)
-// ======================================================
+function cargarPersonajesPromesa() {
+  clearFetchOutput();
+  logFetch("Iniciando petición con Promesas...");
 
-function obtenerDatosPromise() {
-  return new Promise((resolve, reject) => {
-    // (2) Se ejecuta inmediatamente el executor de la promesa
-
-    setTimeout(() => {
-      // (5) Se ejecuta después del delay
-
-      const exito = true;
-
-      if (exito) {
-        resolve("Datos obtenidos (promesa)");
-      } else {
-        reject("Error al obtener datos");
+  fetch("https://rickandmortyapi.com/api/character")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
       }
-    }, 2000);
-  });
-}
-
-function ejecutarPromesas() {
-  clearOutput();
-
-  // (1) Se ejecuta inmediatamente
-  log("Paso A");
-
-  obtenerDatosPromise()
+      return response.json();
+    })
     .then((data) => {
-      // (6) Microtask queue (mayor prioridad que setTimeout)
-      log(data);
-      log("Paso C");
+      logFetch(`✅ ${data.results.length} personajes obtenidos (Promesas)`);
+      renderCards(data.results);
     })
     .catch((error) => {
-      // (6) También microtask
-      log("Error: " + error);
+      logFetch("❌ Error: " + error.message);
     })
     .finally(() => {
-      // (7) Siempre se ejecuta al final
-      log("Finalizó la operación (finally)");
+      logFetch("Petición finalizada (Promesas)");
     });
-
-  // (3) NO espera la promesa
-  log("Paso B (no espera)");
-
-  // (4) Termina código síncrono
 }
 
-/*
-FLUJO REAL:
-1 → Paso A
-2 → Se crea la promesa (executor corre)
-3 → Paso B
-4 → Fin del código síncrono
-5 → setTimeout resuelve la promesa
-6 → .then/.catch entran como microtasks
-7 → finally se ejecuta
-*/
+// --- Método 2: Async / Await (try / catch / finally) ---
 
-// ======================================================
-// 3. ASYNC / AWAIT (try / catch / finally)
-// ======================================================
-
-async function ejecutarAsyncAwait() {
-  clearOutput();
-
-  // (1) Se ejecuta inmediatamente
-  log("Paso A");
+async function cargarPersonajesAsync() {
+  clearFetchOutput();
+  logFetch("Iniciando petición con Async/Await...");
 
   try {
-    // (2) Se llama la promesa
-    // (3) await pausa ESTA función (pero NO bloquea el hilo)
-    const data = await obtenerDatosPromise();
+    const response = await fetch("https://rickandmortyapi.com/api/character");
 
-    // (6) Cuando la promesa se resuelve, continúa aquí
-    log(data);
-    log("Paso C");
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    logFetch(`✅ ${data.results.length} personajes obtenidos (Async/Await)`);
+    renderCards(data.results);
   } catch (error) {
-    // (6) Si falla, entra aquí
-    log("Error: " + error);
+    logFetch("❌ Error: " + error.message);
   } finally {
-    // (7) Siempre se ejecuta
-    log("Finalizó la operación (finally)");
+    logFetch("Petición finalizada (Async/Await)");
   }
-
-  // (8) Continúa después del await
-  log("Paso B (después del await)");
 }
-
-/*
-FLUJO REAL:
-1 → Paso A
-2 → Se llama promesa
-3 → await pausa la función
-4 → El hilo sigue libre (no bloquea)
-5 → promesa se resuelve
-6 → continúa ejecución
-7 → finally
-8 → Paso B
-*/
 
 // ======================================================
 // EVENTOS
 // ======================================================
 document
-  .getElementById("btn-callback")
-  .addEventListener("click", ejecutarCallbacks);
+  .getElementById("btn-fetch-promise")
+  .addEventListener("click", cargarPersonajesPromesa);
 
 document
-  .getElementById("btn-promise")
-  .addEventListener("click", ejecutarPromesas);
-
-document
-  .getElementById("btn-async")
-  .addEventListener("click", ejecutarAsyncAwait);
+  .getElementById("btn-fetch-async")
+  .addEventListener("click", cargarPersonajesAsync);
