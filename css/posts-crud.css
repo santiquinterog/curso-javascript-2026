@@ -1,0 +1,194 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1e1e2f;
+  color: white;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e0e0ff;
+}
+
+/* ======================================================
+   SECCIONES
+====================================================== */
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #a0a0cc;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #3a3a58;
+  padding-bottom: 8px;
+}
+
+/* ======================================================
+   BOTONES
+====================================================== */
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+button {
+  padding: 10px 22px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.btn-get {
+  background: #3b82f6;
+}
+.btn-post {
+  background: #22c55e;
+}
+.btn-put {
+  background: #f59e0b;
+}
+.btn-delete {
+  background: #ef4444;
+}
+
+/* ======================================================
+   ÁREA DE RESULTADO
+====================================================== */
+
+.result-box {
+  background: #12122a;
+  border: 1px solid #3a3a58;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 60px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.result-box pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #c3f6c8;
+}
+
+.result-box .label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.label-get {
+  background: #3b82f6;
+  color: #fff;
+}
+.label-post {
+  background: #22c55e;
+  color: #fff;
+}
+.label-put {
+  background: #f59e0b;
+  color: #000;
+}
+.label-delete {
+  background: #ef4444;
+  color: #fff;
+}
+.label-error {
+  background: #991b1b;
+  color: #fca5a5;
+}
+
+/* ======================================================
+   GRID DE POSTS (GET /posts)
+====================================================== */
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.post-card {
+  background: #2a2a40;
+  border-radius: 10px;
+  padding: 16px;
+  border-left: 4px solid #3b82f6;
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+}
+
+.post-card .post-id {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.post-card h3 {
+  font-size: 0.95rem;
+  color: #e0e0ff;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.post-card p {
+  font-size: 0.82rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+/* ======================================================
+   LOADING SPINNER
+====================================================== */
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a0a0cc;
+  font-size: 0.9rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #3a3a58;
+  border-top-color: #818cf8;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

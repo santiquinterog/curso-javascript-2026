@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async / Await — JSONPlaceholder</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/posts-crud.css">
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a class="nav-brand" href="index.html">⚡ Curso JS 2026</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="forms-basics.html" class="nav-link">Formularios</a></li>
+                <li><a href="css-basics.html" class="nav-link">CSS Básico</a></li>
+                <li><a href="flexbox.html" class="nav-link">Flexbox</a></li>
+                <li><a href="javascript-basics.html" class="nav-link">JS Básico</a></li>
+                <li><a href="dom-manipulation.html" class="nav-link">DOM</a></li>
+                <li><a href="form-logic-example.html" class="nav-link">Form + Lógica</a></li>
+                <li><a href="local-storage.html" class="nav-link">LocalStorage</a></li>
+                <li><a href="asincronismo.html" class="nav-link">Asincronismo</a></li>
+                <li><a href="posts-crud.html" class="nav-link active">Posts CRUD</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Async / Await — JSONPlaceholder API</h1>
+
+    <!-- ══════════════════════════════════════
+       GET /posts
+  ═══════════════════════════════════════════ -->
+    <section class="section">
+        <h2 class="section-title">GET &nbsp;/posts — Obtener todos los posts</h2>
+        <div class="btn-group">
+            <button id="btn-get" class="btn-get">GET /posts</button>
+        </div>
+        <div class="result-box" id="result-get">
+            <span style="color:#4b5563">Pulsa el botón para ver la respuesta…</span>
+        </div>
+        <div class="posts-grid" id="posts-grid"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       POST /posts
+  ═══════════════════════════════════════════ -->
+    <section class="section">
+        <h2 class="section-title">POST &nbsp;/posts — Crear un post</h2>
+        <p style="color:#9ca3af; font-size:0.87rem; margin-bottom:12px;">
+            Envía: <code
+                style="background:#2a2a40;padding:2px 6px;border-radius:4px;">{ title: "foo", body: "bar", userId: 1 }</code>
+        </p>
+        <div class="btn-group">
+            <button id="btn-post" class="btn-post">POST /posts</button>
+        </div>
+        <div class="result-box" id="result-post">
+            <span style="color:#4b5563">Pulsa el botón para ver la respuesta…</span>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       PUT /posts/1
+  ═══════════════════════════════════════════ -->
+    <section class="section">
+        <h2 class="section-title">PUT &nbsp;/posts/1 — Actualizar un post</h2>
+        <p style="color:#9ca3af; font-size:0.87rem; margin-bottom:12px;">
+            Envía: <code
+                style="background:#2a2a40;padding:2px 6px;border-radius:4px;">{ id: 1, title: "foo", body: "bar", userId: 1 }</code>
+        </p>
+        <div class="btn-group">
+            <button id="btn-put" class="btn-put">PUT /posts/1</button>
+        </div>
+        <div class="result-box" id="result-put">
+            <span style="color:#4b5563">Pulsa el botón para ver la respuesta…</span>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+       DELETE /posts/1
+  ═══════════════════════════════════════════ -->
+    <section class="section">
+        <h2 class="section-title">DELETE &nbsp;/posts/1 — Eliminar un post</h2>
+        <p style="color:#9ca3af; font-size:0.87rem; margin-bottom:12px;">
+            No envía body. La API responde con <code
+                style="background:#2a2a40;padding:2px 6px;border-radius:4px;">status 200</code> y <code
+                style="background:#2a2a40;padding:2px 6px;border-radius:4px;">{}</code>
+        </p>
+        <div class="btn-group">
+            <button id="btn-delete" class="btn-delete">DELETE /posts/1</button>
+        </div>
+        <div class="result-box" id="result-delete">
+            <span style="color:#4b5563">Pulsa el botón para ver la respuesta…</span>
+        </div>
+    </section>
+
+    <script src="../js/posts-crud.js"></script>
+</body>
+
+</html>
